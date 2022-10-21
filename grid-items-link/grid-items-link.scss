@@ -1,0 +1,54 @@
+$grid-item-gap: 2em;
+$grid-item-height: 300px;
+$grid-item-width: 400px;
+
+.ct-container-items-imgs-link {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.1rem;
+    gap: $grid-item-gap;
+}
+
+.ct-item-link {
+    all: unset;
+    box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-width: $grid-item-width;
+    position: relative;
+    transition: box-shadow 0.5s;
+}
+
+.ct-item-link:hover {
+    box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.5s;
+}
+.ct-item-link:active {
+    filter: brightness(0.7);
+    transition: filter 0.5s;
+}
+
+.ct-item-img {
+    aspect-ratio: 1;
+    height: $grid-item-height;
+    object-fit: cover;
+}
+
+.ct-item-title {
+    background-color: rgba($color: #ffffff, $alpha: 0.7);
+    border-top-right-radius: 0.6em;
+    bottom: 0px;
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    padding: 0.3em 0.6em;
+    position: absolute;
+}
+
+@media (min-width: 0px) and (max-width: 430px) {
+    .ct-item-link {min-width: 0;}
+    .ct-item-img {height: 70vw;}
+    .ct-container-items-imgs-link {font-size: 6vw;}
+}
